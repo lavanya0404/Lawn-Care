@@ -203,7 +203,7 @@
             <h1>Contact Us</h1>
             <p>Ask a question or request a consultation, and we will respond to you in a timely manner.</p>
 
-              <form id="contact--form" style="width: 26rem; padding: 20px">
+            <form id="contact--form registrationform" onsubmit="resetForm()" style="width: 26rem; padding: 20px">
                 <!-- Name input -->
                 <div data-mdb-input-init class="form-outline mb-3">
                   <label class="form-label" for="fullname">Name</label>
@@ -411,6 +411,10 @@ const firebaseConfig = {
           alert("Error sending message. Please try again.");
         }
       });
+      function resetForm() {
+    document.getElementById('registrationform').reset();
+    return false;  // Prevent actual form submission for demo purposes
+  }
     </script>
   </body>
 </html>
